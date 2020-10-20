@@ -1,3 +1,4 @@
+var path = require("path");
 require("dotenv").config();
 const ClientOrder = require("./models/order");
 const mongoose = require("mongoose");
@@ -8,8 +9,17 @@ const { request, response } = require("express");
 const FoodAvailable = require("./models/foodavailable");
 const Joi = require('joi')
 const User =require('./models/User')
-const path =require('path');
 
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, "build")));
+  // Handle React routing, return all requests to React app
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, "build", "index.html"));
+  });
+}else{
+  app.use(express.static(path.join(__dirname,"build")));
+}
 
 app.use(express.json());
 app.use(cors());
@@ -100,14 +110,5 @@ const validateUser = (user) => {
   return validationSchema.validate(user);
 };
 
-//Serve static assets if in production
-if(process.nextTick.NODE_ENV ==='production'){
-  //Set static folder
-  app.use(express.static('orderapp/build'));
-  app.get('*', (req, res)=>{
-    res.sendFile(path.resolve_dirname, 'order','build', 'index.html')
-  })
-}
-
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
