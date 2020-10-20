@@ -1,0 +1,130 @@
+.home-nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:  #f5bf16;
+  padding: 0px 50px;
+}
+.home-nav-ul {
+  margin-right: 12px;
+}
+.home-nav-ul li {
+  float: left;
+  list-style: none;
+  padding: 15px;
+  padding-right: 18px;
+
+}
+.home-nav-ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: .3s all ease;
+}
+.home-nav-ul li a:hover {
+  color: #0F6987;
+}
+.home-logo {
+  justify-content: right;
+  margin-top: -5px;
+}
+img {
+  width: 80px;
+}
+.home-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-top: 50px;
+}
+/*
+  .home-menu-item{
+    display: flex;
+    flex-direction: row;
+    margin:12px;
+    background-color: red;
+    width: 100%;
+    justify-content: space-between;
+
+  }
+  */
+.home-main table {
+  border-collapse: collapse;
+  width: 60%;
+}
+.home-main th {
+  text-align: center;
+}
+.home-main td {
+  height: 50px;
+  margin-top: 2px;
+  text-align: center;
+  font-size: 16px;
+  padding: 2px;
+}
+
+.home-main .home-cart {
+  margin-right: 10px;
+  width: 20vw;
+}
+.home-main .home-cart h3 {
+  display: block;
+  font-size: 1.17em;
+  background-color: #f3f3f3;
+}
+.table-table_summary {
+  border-collapse: collapse;
+  margin: 0;
+}
+
+
+table button{
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .3s all ease;
+}
+table button:hover{
+  background:rgb(15, 105, 135);
+  color: #fff;
+}
+table button:focus{
+  outline: none;
+}
+table button:active{
+  background: rgba(255, 165, 0, .2);
+  outline: none;
+}
+table button svg{
+  font-size: 2em;
+}
+table, tr,td{
+  background: none !important;
+}
+
+.order-title{
+  margin: 30px 5px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.table-table_summary{
+  width: 100%;
+  margin-top: 20px;
+}
+.table-table_summary td{
+  text-align: left;
+  height: 50px;
+  padding: 0 10px;
+}
+.total{
+  font-size: 30px;
+  font-weight: bold;
+}

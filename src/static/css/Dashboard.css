@@ -1,0 +1,116 @@
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+.nav-container {
+  display: flex;
+  flex-direction: row;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+
+  padding: 50px;
+  padding-top: 20px;
+  width: 200px;
+  height: 100%;
+
+}
+.dashbaord h1{
+  font-size: 40px;
+}
+.dashboard header{
+  height: 100vh; 
+  background: #FFCC00;
+  font-size: 20px;
+
+  font-weight: bold;
+}
+nav ul {
+
+  margin: 0;
+  padding: 0px 0px;
+  position: relative;
+
+  list-style: none;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.dashboard nav ul li a {
+  color: #282c34;
+  display: block;
+  padding: 8px 4px;
+  margin: 16px 4px;
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+
+  text-decoration: none;
+}
+
+nav ul a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: #0F6987;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right;
+  transform-origin: right;
+}
+
+nav ul a:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: left;
+  transform-origin: left;
+}
+.main {
+
+ width: 100%;
+ justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  margin-left: 0px; /* Same as the width of the sidenav */
+  font-size: 16px; /* Increased text to enable scrolling */
+  padding: 40px 10px;
+
+  
+}
+.dashboard table {
+ border-collapse: collapse !important;
+}
+
+.dashboard th {
+  text-align: center;
+  padding: 8px 26px;
+  font-size: 20px;  
+}
+.dashboard tr {
+  display: table-row;
+  margin-bottom: 38px;
+  height: 50px;
+}
+.dashboard td {
+  text-align: center;
+
+  padding: 8px 26px;
+  font-size: 17px;
+  display: table-cell;
+}
+.dashbaord tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
