@@ -101,7 +101,7 @@ const validateUser = (user) => {
   return validationSchema.validate(user);
 };
 
-if (process.env.NODE_ENV === 'development'){
+if (process.env.NODE_ENV === 'production'){
   app.use('/',express.static(path.join(__dirname,"build")));
 }
 else {
