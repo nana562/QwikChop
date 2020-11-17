@@ -19,4 +19,6 @@ Update Menu UI to render image of dishes
 
 Update UI responsiveness
 
+Implement dark mode feature
+
 Implement backend with NestJS instead of ExpressJS
