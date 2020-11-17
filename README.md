@@ -13,6 +13,8 @@ Admin delete functionality
 
 User signup and login functionality
 
+Implement search functionality 
+
 Update Menu UI to render image of dishes
 
 Update UI responsiveness
