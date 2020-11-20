@@ -22,3 +22,5 @@ Update UI responsiveness
 Implement dark mode feature
 
 Implement backend with NestJS instead of ExpressJS
+
+Allow admin to view user location on google maps
